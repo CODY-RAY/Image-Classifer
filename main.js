@@ -24,8 +24,12 @@ $(document).ready(()=>{
         model.classify(img).then(predictions => {
             $("#prodic").show()
             console.log(predictions);
+            predictions.forEach(e => {
+                var prediction = "<h2 class='center'>Class name: ${e.className}</h2> +\
+                 <br> + <h2 class='center'>Probability: ${e.probability.toFixed(4)}</h2>" 
+                $("#Prediction").html(predictions);
+            });
             
-            $("#Prediction").text(predictions);
         });
     });
     
