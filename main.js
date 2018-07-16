@@ -31,7 +31,7 @@ $(document).ready(()=>{
                 var prob = e.probability.toFixed(4)
                 var prediction = "<h2 class='center'>Class name: "+classname+"</h2>\
                  <br> <h2 class='center'>Probability: "+prob+"</h2>" 
-                $("#Prediction").append(prediction);
+                $("#prodic").append(prediction);
             });
             
         });
