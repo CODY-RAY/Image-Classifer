@@ -30,7 +30,7 @@ $(document).ready(()=>{
                 var classname = e.className
                 var prob = e.probability.toFixed(4)
                 var prediction = "<h2 class='center'>Class name: "+classname+"</h2>\
-                 <br> <h2 class='center'>Probability: "+prob+"</h2>" 
+                  <h2 class='center'>Probability: "+prob+"</h2> <br>" 
                 $("#prodic").append(prediction);
             });
             
