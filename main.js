@@ -21,6 +21,7 @@ mobilenet.load().then(model1 => {
 $(document).ready(()=>{
     $("#train").hide()
     $("#train").on("click",()=>{   
+        $("#Prediction").empty();
         model.classify(img).then(predictions => {
             $("#prodic").show()
             console.log(predictions);
