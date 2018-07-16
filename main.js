@@ -4,29 +4,32 @@ function readURL(input) {
 
         reader.onload = function (e) {
             $('#img').attr('src', e.target.result)
-            $("#train").show()
+           
         };
 
         reader.readAsDataURL(input.files[0]);
     }
 }
 
-
+var model 
+mobilenet.load().then(model1 => {
+        console.log("trained");
+        
+    model = model1
+    $("#train").show()
+    })
 $(document).ready(()=>{
     $("#train").hide()
-
-$("#train").on("click",()=>{   
-const img = $('#img');
-
-  // Load the model.
-  mobilenet.load().then(model => {
-    // Classify the image.
-    model.classify(img).then(predictions => {
-        $("#prodic").show()
-        $("#Prediction").text(predictions);
+    $("#train").on("click",()=>{   
+        model.classify(img).then(predictions => {
+            $("#prodic").show()
+            console.log(predictions);
+            
+            $("#Prediction").text(predictions);
+        });
     });
-  });
-}) 
-
+    
+    
+    
 
 })
