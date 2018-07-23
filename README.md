@@ -1,2 +1,2 @@
 # Image-Classifer
-web page https://cody-ray.github.io/Image-Classifer/
+Go here (https://cody-ray.github.io/Image-Classifer/)
